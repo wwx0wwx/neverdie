@@ -1,0 +1,21 @@
+import type { AgentConfigRecord, PanelRecord, AgentKeyRecord } from '@neverdie/protocol';
+export declare function getAgents(): AgentConfigRecord[];
+export declare function getAllRecords(): AgentConfigRecord[];
+export declare function upsertAgent(record: AgentConfigRecord): void;
+export declare function softDeleteAgent(baseUrl: string, updatedAt: string): void;
+export declare function mergeAgents(records: AgentConfigRecord[]): void;
+export declare function hashPassword(password: string): Promise<string>;
+export declare function verifyPassword(password: string, stored: string): Promise<boolean>;
+export declare function hasAdmin(): boolean;
+export declare function createAdmin(username: string, passwordHash: string): void;
+export declare function getAdmin(username: string): {
+    id: number;
+    username: string;
+    passwordHash: string;
+} | undefined;
+export declare function getPanels(): PanelRecord[];
+export declare function upsertPanel(record: PanelRecord): void;
+export declare function softDeletePanel(id: string, deletedAt: string): void;
+export declare function getAgentKeys(): AgentKeyRecord[];
+export declare function upsertAgentKey(record: AgentKeyRecord): void;
+export declare function softDeleteAgentKey(agentId: string, deletedAt: string): void;

@@ -1,0 +1,18 @@
+{
+  "name": "neverdie",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.17.1",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @neverdie/agent --filter @neverdie/panel run dev",
+    "build:deps": "pnpm --filter @neverdie/protocol --filter @neverdie/shared run build",
+    "dev:agent": "pnpm --filter @neverdie/agent run dev",
+    "dev:panel": "pnpm --filter @neverdie/panel run dev",
+    "dev:panel:ui": "pnpm --filter @neverdie/panel run dev:ui",
+    "dev:panel:server": "pnpm --filter @neverdie/panel run dev:server",
+    "build": "pnpm -r run build",
+    "check": "pnpm -r run check",
+    "typecheck": "pnpm -r run typecheck",
+    "clean": "pnpm -r run clean"
+  }
+}

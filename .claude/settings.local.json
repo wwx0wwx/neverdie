@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm install:*)",
+      "Bash(npm install:*)",
+      "Bash(pnpm approve-builds:*)",
+      "Bash(./node_modules/.bin/tsc --version)",
+      "Bash(pnpm build:*)"
+    ]
+  }
+}
